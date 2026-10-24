@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Cairo:wght@400;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* === ORIGINAL THEME VARIABLES === */
+/* === THEME VARIABLES === */
 :root{--bg:#F3F7F2;--surface:#E2ECE3;--ink:#0F2F26;--muted:#4B6258;--green:#1E7A5A;--lime:#B5D56A;--gold:#C99A2E;--rule:#BFD0C4;--hero:#0F2F26;--hero-ink:#F3F7F2;color-scheme:light}
 @media (prefers-color-scheme:dark){:root{--bg:#0B1D18;--surface:#142B24;--ink:#EAF2EC;--muted:#9FB8AB;--green:#4DB38A;--rule:#26443A;--hero:#07130F;color-scheme:dark}}
 *{box-sizing:border-box}
@@ -51,6 +51,7 @@ h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;letter-spacing:-.02em;ma
 h3{font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
 .lead{max-width:50rem;color:var(--muted);font-size:1.1rem;margin:0 0 2.5rem}
 .two{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
 .tint{background:var(--surface)}
 .lists{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin-top:1.5rem}
 ul.plain{list-style:none;margin:0;padding:0}
@@ -58,6 +59,9 @@ ul.plain li{padding:.45rem 0;border-bottom:1px solid var(--rule)}
 ul.plain li small{color:var(--muted)}
 .cats{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0 0;padding:0;list-style:none}
 .cats li{border:1.5px solid var(--green);color:var(--ink);padding:.3rem .85rem;border-radius:2rem;font-size:.97rem}
+dl.spec{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem}
+dl.spec dt{font-weight:600}
+dl.spec dd{margin:0;color:var(--muted)}
 
 /* === PRODUCT CATALOG GRIDS === */
 .product-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
@@ -67,6 +71,7 @@ ul.plain li small{color:var(--muted)}
 .product-img { width: 100%; aspect-ratio: 4/5; object-fit: contain; background: #fff; padding: 1rem; border-bottom: 1px solid var(--rule); }
 .product-info { padding: 1.25rem; flex-grow: 1; display: flex; flex-direction: column; }
 .product-info h3 { font-size: 1.15rem; margin-bottom: 0.25rem; }
+.product-info .ar-title { font-size: 1rem; color: var(--green); font-weight: 600; margin-bottom: 0.5rem; }
 .product-info p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; flex-grow: 1; }
 .btn-details { background: var(--green); color: #fff; border: none; padding: 0.6rem; border-radius: 0.4rem; cursor: pointer; font-weight: 600; width: 100%; text-align: center; transition: background 0.2s;}
 .btn-details:hover { background: #155a42; }
@@ -89,6 +94,7 @@ ul.plain li small{color:var(--muted)}
 .modal-header { display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 1.5rem; }
 .modal-header img { width: 120px; height: 150px; object-fit: contain; background: #fff; border-radius: 0.5rem; border: 1px solid var(--rule); padding: 0.5rem; }
 .modal-header-text h3 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+.modal-header-text .ar-title { font-size: 1.3rem; color: var(--green); font-weight: 600; }
 .modal-body h4 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: var(--ink); border-bottom: 1px solid var(--rule); padding-bottom: 0.25rem; }
 .modal-body p, .modal-body ul { color: var(--muted); font-size: 0.95rem; margin: 0 0 1rem; }
 .modal-body ul { padding-left: 1.2rem; }
@@ -132,12 +138,12 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
   <div class="facts">
     <div><b>New Cairo</b><span data-en="Headquarters" data-ar="المقر الرئيسي">Headquarters</span></div>
     <div><b>10th of Ramadan</b><span data-en="Production facilities" data-ar="مرافق الإنتاج">Production facilities</span></div>
-    <div><b>5 sales offices</b><span data-en="Sweden, United States, Kuwait, Jordan, Italy" data-ar="السويد، الولايات المتحدة، الكويت، الأردن، إيطاليا">Sweden, United States, Kuwait, Jordan, Italy</span></div>
+    <div><b>5 sales offices</b><span data-en="Sweden, USA, Kuwait, Jordan, Italy" data-ar="السويد، أمريكا، الكويت، الأردن، إيطاليا">Sweden, USA, Kuwait, Jordan, Italy</span></div>
     <div><b>30+ countries</b><span data-en="Our olives and cheese are on shelves in more than 30 countries" data-ar="زيتوننا وجبننا متوفرون في أكثر من 30 دولة">Our olives and cheese are on shelves in more than 30 countries</span></div>
   </div>
 </div></div>
 
-<!-- ABOUT SECTION (Original) -->
+<!-- ABOUT SECTION -->
 <section id="about"><div class="wrap two">
   <div>
     <h2 data-en="About us" data-ar="من نحن">About us</h2>
@@ -160,140 +166,4 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
   <div class="product-grid">
     <!-- Okra -->
     <div class="product-card">
-      <!-- PLACEHOLDER IMAGE - Replace src with your actual image file path -->
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Frozen+Okra" alt="Frozen Okra Zero" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Okra Zero" data-ar="بامية صغيرة">Okra Zero</h3>
-        <p data-en="Packed with nutrients that improve digestion, control cholesterol, and boost immunity." data-ar="غنية بالعناصر الغذائية التي تحسن الهضم، وتتحكم في الكوليسترول، وتعزز المناعة.">Packed with nutrients that improve digestion, control cholesterol, and boost immunity.</p>
-        <button class="btn-details" onclick="openModal('modal-okra')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Molokhia -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Minced+Molokhia" alt="Frozen Minced Molokhia" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Minced Molokhia" data-ar="ملوخية مفرومة">Minced Molokhia</h3>
-        <p data-en="Full of fibres that improve digestion, regulate blood pressure, and help with heart health." data-ar="غنية بالألياف التي تحسن الهضم، وتنظم ضغط الدم، وتساعد في صحة القلب.">Full of fibres that improve digestion, regulate blood pressure, and help with heart health.</p>
-        <button class="btn-details" onclick="openModal('modal-molokhia')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Green Peas -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Green+Peas" alt="Frozen Green Peas" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Green Peas" data-ar="بسلة خضراء">Green Peas</h3>
-        <p data-en="Packed with nutrients that boost immunity, good for eye health, and a good source of iron." data-ar="غنية بالعناصر الغذائية التي تعزز المناعة، جيدة لصحة العين، ومصدر جيد للحديد.">Packed with nutrients that boost immunity, good for eye health, and a good source of iron.</p>
-        <button class="btn-details" onclick="openModal('modal-peas')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Green Beans -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Green+Beans" alt="Frozen Green Beans" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Green Beans" data-ar="فاصوليا خضراء">Green Beans</h3>
-        <p data-en="Help with good eye and heart health. Improve digestion and promote weight loss." data-ar="تساعد في صحة العين والقلب. تحسن الهضم وتعزز فقدان الوزن.">Help with good eye and heart health. Improve digestion and promote weight loss.</p>
-        <button class="btn-details" onclick="openModal('modal-beans')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Mixed Veg -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Mixed+Veg" alt="Frozen Mixed Vegetables" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Mixed Vegetables" data-ar="خضار مشكل">Mixed Vegetables</h3>
-        <p data-en="A colorful mix of peas, carrots, and cut green beans. Tasty, healthy, and great value." data-ar="مزيج ملون من البازلاء والجزر والفاصوليا الخضراء المقطعة. لذيذ وصحي وقيمة رائعة.">A colorful mix of peas, carrots, and cut green beans. Tasty, healthy, and great value.</p>
-        <button class="btn-details" onclick="openModal('modal-mixedveg')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- French Fries -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=French+Fries" alt="Frozen Pre-Fried French Fries" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Pre-Fried French Fries" data-ar="بطاطس نصف مقلية">Pre-Fried French Fries</h3>
-        <p data-en="Grade A, rich in Vitamin A, natural fiber source. 2.5 KG pack." data-ar="درجة أولى، غنية بفيتامين أ، مصدر ألياف طبيعية. عبوة 2.5 كجم.">Grade A, rich in Vitamin A, natural fiber source. 2.5 KG pack.</p>
-        <button class="btn-details" onclick="openModal('modal-fries')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Strawberries -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Strawberries" alt="Frozen Strawberries" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Frozen Strawberries" data-ar="فراولة مجمدة">Frozen Strawberries</h3>
-        <p data-en="Rich in Vitamin C and Antioxidants. GMO Free, No preservatives. 800g pack." data-ar="غنية بفيتامين C ومضادات الأكسدة. خالية من الكائنات المعدلة وراثيا، بدون مواد حافظة. عبوة 800 جرام.">Rich in Vitamin C and Antioxidants. GMO Free, No preservatives. 800g pack.</p>
-        <button class="btn-details" onclick="openModal('modal-strawberries')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<!-- CANNED GOODS -->
-<section id="canned" class="tint"><div class="wrap">
-  <h2 data-en="Canned Vegetables & Beans" data-ar="خضروات وبقوليات معلبة">Canned Vegetables & Beans</h2>
-  <p class="lead" data-en="Halal, 100% natural and ready to eat. All cans are 400 g." data-ar="حلال، طبيعي 100% وجاهز للأكل. جميع العلب بوزن 400 جرام.">Halal, 100% natural and ready to eat. All cans are 400 g.</p>
-  
-  <div class="product-grid">
-    <!-- Split Fava Beans -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Split+Fava+Beans" alt="Split Fava Beans" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Split Fava Beans" data-ar="فول مقشور">Split Fava Beans</h3>
-        <p data-en="100% Natural, Rich in Fiber & Vitamins. Ready to Eat." data-ar="طبيعي 100%، غني بالألياف والفيتامينات. جاهز للأكل.">100% Natural, Rich in Fiber & Vitamins. Ready to Eat.</p>
-        <button class="btn-details" onclick="openModal('modal-fava')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Sweet Corn -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Sweet+Corn" alt="Sweet Corn" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Sweet Corn" data-ar="ذرة سكرية">Sweet Corn</h3>
-        <p data-en="100% Natural, Rich in Fiber & Vitamins. Healthy & Delicious." data-ar="طبيعي 100%، غني بالألياف والفيتامينات. صحي ولذيذ.">100% Natural, Rich in Fiber & Vitamins. Healthy & Delicious.</p>
-        <button class="btn-details" onclick="openModal('modal-corn')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Sweet Peas -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Sweet+Peas" alt="Sweet Peas Plain" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Sweet Peas Plain" data-ar="بسلة سكرية سادة">Sweet Peas Plain</h3>
-        <p data-en="100% Natural, Rich in Fiber & Vitamins. Ready to Eat." data-ar="طبيعي 100%، غني بالألياف والفيتامينات. جاهز للأكل.">100% Natural, Rich in Fiber & Vitamins. Ready to Eat.</p>
-        <button class="btn-details" onclick="openModal('modal-canpeas')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Mixed Veg -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Canned+Mixed+Veg" alt="Mixed Vegetables" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Mixed Vegetables" data-ar="خضار مشكل">Mixed Vegetables</h3>
-        <p data-en="Peas, Green Beans, Carrots. 100% Natural, Ready to Eat." data-ar="بازلاء، فاصوليا خضراء، جزر. طبيعي 100%، جاهز للأكل.">Peas, Green Beans, Carrots. 100% Natural, Ready to Eat.</p>
-        <button class="btn-details" onclick="openModal('modal-canmixed')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Foul Medammas -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Foul+Medammas" alt="Plain Foul Medammas" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Plain Foul Medammas" data-ar="فول مدمس سادة">Plain Foul Medammas</h3>
-        <p data-en="100% Natural, Rich in Protein & Fiber. Healthy & Delicious." data-ar="طبيعي 100%، غني بالبروتين والألياف. صحي ولذيذ.">100% Natural, Rich in Protein & Fiber. Healthy & Delicious.</p>
-        <button class="btn-details" onclick="openModal('modal-foul')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- White Beans -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=White+Beans" alt="White Beans" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="White Beans" data-ar="فاصوليا بيضاء">White Beans</h3>
-        <p data-en="Harvest Pearl. 100% Natural, Rich in Protein & Fiber." data-ar="لؤلؤة الحصاد. طبيعي 100%، غني بالبروتين والألياف.">Harvest Pearl. 100% Natural, Rich in Protein & Fiber.</p>
-        <button class="btn-details" onclick="openModal('modal-whitebeans')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<!-- OLIVES & CHEESE -->
-<section id="olives"><div class="wrap">
-  <h2 data-en="Olives, Pickles & Cheese" data-ar="زيتون، مخللات وجبن">Olives, Pickles & Cheese</h2>
-  <p class="lead" data-en="Table olives and dairy made with the same attention to hygiene and consistency." data-ar="زيتون المائدة ومنتجات الألبان المصنوعة بنفس الاهتمام بالنظافة والجودة.">Table olives and dairy made with the same attention to hygiene and consistency.</p>
-  
-  <div class="product-grid">
-    <!-- Green Olives -->
-    <div class="product-card">
-      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Green+Olives" alt="Green Olives" class="product
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wgARCAHgAtADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAECAwQFBgf/xAAaAQEBAQEBAQEAAAAAAAAAAAAAAQIDBAUG/9oADAMBAAIQAxAAAAHngc/CAAAAAAADTQNOBoGIGJgAAAAAAAAAAAAxAxAxAxAxAxAxAxAxAxAxAxAxAxAxAxAxAxAxAxAxAwAAABgAAAAA0wTQNAxAxAxAxAxAxAxAxAxAxAxAxAxAwAAAABoGIGJgAAAAAMTQNOBoGIGIGIGIGIGIGIGIGIGIGIGIGIGIGIGIGIGIGIGJgADQMTAAAAABoGgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYgYg
