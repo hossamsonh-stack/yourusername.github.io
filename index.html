@@ -4,16 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mamma’s Food | Premium Egyptian Manufacturer & Exporter</title>
-<meta name="description" content="Mamma's Food manufactures and exports premium frozen vegetables, fruits, canned goods, olives, cheese, and FMCG products from Egypt to the world.">
+<meta name="description" content="Mamma’s Food manufactures and exports frozen fruit and vegetables, canned vegetables, olives, pickles and cheese from Egypt, and trades FMCG goods to Europe and the Gulf.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Cairo:wght@400;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+/* === ORIGINAL THEME VARIABLES === */
 :root{--bg:#F3F7F2;--surface:#E2ECE3;--ink:#0F2F26;--muted:#4B6258;--green:#1E7A5A;--lime:#B5D56A;--gold:#C99A2E;--rule:#BFD0C4;--hero:#0F2F26;--hero-ink:#F3F7F2;color-scheme:light}
 @media (prefers-color-scheme:dark){:root{--bg:#0B1D18;--surface:#142B24;--ink:#EAF2EC;--muted:#9FB8AB;--green:#4DB38A;--rule:#26443A;--hero:#07130F;color-scheme:dark}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Public Sans", "Cairo", system-ui, sans-serif;padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Public Sans", "Cairo", system-ui,sans-serif;padding-top:env(safe-area-inset-top,0px)}
 [dir="rtl"] body { font-family: "Cairo", "Public Sans", system-ui, sans-serif; }
 a{color:inherit}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
@@ -21,7 +22,7 @@ a{color:inherit}
 h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;line-height:1.05;margin:0}
 [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3 { font-family: "Cairo", "Bricolage Grotesque", sans-serif; }
 
-/* Header & Nav */
+/* === HEADER & NAV === */
 header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--rule)}
 header .wrap{display:flex;justify-content:space-between;align-items:center;gap:.75rem 1.5rem;flex-wrap:wrap;padding-top:.9rem;padding-bottom:.9rem}
 .brand{font:800 1.4rem "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--green);display:flex;align-items:center;gap:0.5rem}
@@ -31,23 +32,38 @@ nav a:hover{color:var(--ink)}
 .lang-btn { background: var(--surface); border: 1px solid var(--rule); color: var(--ink); padding: 0.4rem 0.8rem; border-radius: 0.3rem; cursor: pointer; font-weight: 600; }
 .lang-btn:hover { background: var(--rule); }
 
-/* Hero */
+/* === HERO === */
 .hero{background:var(--hero);color:var(--hero-ink);padding:5rem 0 4rem}
 .hero h1{font-size:clamp(2.6rem,8vw,5.4rem);font-weight:800;letter-spacing:-.03em;max-width:15ch}
 .hero p{max-width:40rem;font-size:1.2rem;color:#C9DACF;margin:1.5rem 0 2rem}
 .btns{display:flex;gap:.75rem;flex-wrap:wrap}
-.btn{display:inline-block;background:var(--lime);color:#0F2F26;font-weight:600;padding:.85rem 1.5rem;border-radius:.4rem;text-decoration:none;border:none;cursor:pointer}
+.btn{display:inline-block;background:var(--lime);color:#0F2F26;font-weight:600;padding:.85rem 1.5rem;border-radius:.4rem;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.2s;}
+.btn:hover { opacity: 0.9; }
 .btn.alt{background:transparent;color:var(--hero-ink);border:1.5px solid #6F9A86}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.5rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid #2B4D40}
+.facts b{display:block;font:700 1.15rem "Bricolage Grotesque",sans-serif;color:var(--lime)}
+.facts span{color:#C9DACF;font-size:.95rem}
 
-/* Sections */
+/* === SECTIONS & LAYOUT === */
 section{padding:4rem 0;border-top:1px solid var(--rule)}
 .hero+section{border-top:0}
 h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;letter-spacing:-.02em;margin-bottom:1rem}
 h3{font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
 .lead{max-width:50rem;color:var(--muted);font-size:1.1rem;margin:0 0 2.5rem}
+.two{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
 .tint{background:var(--surface)}
+.lists{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin-top:1.5rem}
+ul.plain{list-style:none;margin:0;padding:0}
+ul.plain li{padding:.45rem 0;border-bottom:1px solid var(--rule)}
+ul.plain li small{color:var(--muted)}
+.cats{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0 0;padding:0;list-style:none}
+.cats li{border:1.5px solid var(--green);color:var(--ink);padding:.3rem .85rem;border-radius:2rem;font-size:.97rem}
+dl.spec{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem}
+dl.spec dt{font-weight:600}
+dl.spec dd{margin:0;color:var(--muted)}
 
-/* Product Grid */
+/* === PRODUCT CATALOG GRIDS === */
 .product-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 .product-card { background: var(--bg); border: 1px solid var(--rule); border-radius: 0.75rem; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s; }
 .tint .product-card { background: var(--bg); }
@@ -61,7 +77,7 @@ h3{font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
 .btn-details:hover { background: #155a42; }
 @media (prefers-color-scheme: dark) { .btn-details:hover { background: #3d9e78; } }
 
-/* FMCG Brands */
+/* === FMCG BRANDS === */
 .fmcg-category { margin-bottom: 3rem; }
 .fmcg-category h3 { font-size: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--lime); display: inline-block; padding-bottom: 0.25rem; }
 .brand-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
@@ -69,7 +85,7 @@ h3{font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
 .brand-item img { max-width: 100%; height: 60px; object-fit: contain; margin-bottom: 0.5rem; }
 .brand-item span { font-size: 0.85rem; font-weight: 600; color: #333; }
 
-/* Modal */
+/* === MODALS === */
 .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; z-index: 100; padding: 1rem; backdrop-filter: blur(4px); }
 .modal-overlay.active { display: flex; }
 .modal-content { background: var(--bg); border-radius: 1rem; max-width: 700px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; padding: 2rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
@@ -88,8 +104,10 @@ h3{font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
 [dir="rtl"] .nutrition-table th, [dir="rtl"] .nutrition-table td { text-align: right; }
 .nutrition-table th { background: var(--surface); font-weight: 600; }
 
-/* Footer */
+/* === FOOTER === */
 footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.95rem;border-top:1px solid var(--rule);text-align:center;}
+@media (max-width:42rem){.frozen{grid-template-columns:1fr}.hero{padding:3.5rem 0 3rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -100,11 +118,12 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     Mamma’s Food
   </a>
   <nav aria-label="Main">
-    <a href="#frozen">Frozen</a>
-    <a href="#canned">Canned</a>
-    <a href="#olives">Olives & Cheese</a>
-    <a href="#fmcg">FMCG Brands</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" data-en="About" data-ar="من نحن">About</a>
+    <a href="#frozen" data-en="Frozen" data-ar="مجمدة">Frozen</a>
+    <a href="#canned" data-en="Canned" data-ar="معلبة">Canned</a>
+    <a href="#olives" data-en="Olives & Cheese" data-ar="زيتون وجبن">Olives & Cheese</a>
+    <a href="#fmcg" data-en="FMCG" data-ar="سلع استهلاكية">FMCG</a>
+    <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
     <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">العربية</button>
   </nav>
 </div></header>
@@ -113,14 +132,35 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
 <!-- HERO -->
 <div class="hero"><div class="wrap">
   <h1 data-en="Premium quality beyond compare." data-ar="جودة ممتازة لا مثيل لها.">Premium quality beyond compare.</h1>
-  <p data-en="Mamma’s Food is an Egyptian manufacturer and exporter of premium frozen fruit and vegetables, canned goods, olives, pickles, cheese, and FMCG products." data-ar="ماماز فود هي شركة مصرية رائدة في تصنيع وتصدير الفواكه والخضروات المجمدة، المعلبات، الزيتون، المخللات، الجبن، والسلع الاستهلاكية سريعة الدوران.">Mamma’s Food is an Egyptian manufacturer and exporter of premium frozen fruit and vegetables, canned goods, olives, pickles, cheese, and FMCG products.</p>
+  <p data-en="Mamma’s Food is an Egyptian manufacturer and exporter of frozen fruit and vegetables, canned vegetables and beans, olives, pickles and cheese. We also trade FMCG goods to buyers in Europe and the Gulf." data-ar="ماماز فود هي شركة مصرية رائدة في تصنيع وتصدير الفواكه والخضروات المجمدة، الخضروات المعلبة، الزيتون، المخللات، والجبن. كما نقوم بتجارة السلع الاستهلاكية سريعة الدوران للمشترين في أوروبا والخليج.">Mamma’s Food is an Egyptian manufacturer and exporter of frozen fruit and vegetables, canned vegetables and beans, olives, pickles and cheese. We also trade FMCG goods to buyers in Europe and the Gulf.</p>
   <div class="btns">
     <a class="btn" href="#frozen" data-en="Explore Products" data-ar="استكشف المنتجات">Explore Products</a>
     <a class="btn alt" href="#contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
   </div>
+  <div class="facts">
+    <div><b>New Cairo</b><span data-en="Headquarters" data-ar="المقر الرئيسي">Headquarters</span></div>
+    <div><b>10th of Ramadan</b><span data-en="Production facilities" data-ar="مرافق الإنتاج">Production facilities</span></div>
+    <div><b>5 sales offices</b><span data-en="Sweden, United States, Kuwait, Jordan, Italy" data-ar="السويد، الولايات المتحدة، الكويت، الأردن، إيطاليا">Sweden, United States, Kuwait, Jordan, Italy</span></div>
+    <div><b>30+ countries</b><span data-en="Our olives and cheese are on shelves in more than 30 countries" data-ar="زيتوننا وجبننا متوفرون في أكثر من 30 دولة">Our olives and cheese are on shelves in more than 30 countries</span></div>
+  </div>
 </div></div>
 
-<!-- FROZEN VEGETABLES -->
+<!-- ABOUT SECTION (Original) -->
+<section id="about"><div class="wrap two">
+  <div>
+    <h2 data-en="About us" data-ar="من نحن">About us</h2>
+    <p data-en="Mamma’s Food is a leading Egyptian company in the manufacturing, international trade, export, import and distribution of premium frozen fruit, vegetables and food commodities. We deliver quality and freshness from our production facilities in the 10th of Ramadan industrial area." data-ar="ماماز فود هي شركة مصرية رائدة في تصنيع، التجارة الدولية، التصدير، الاستيراد، وتوزيع الفواكه والخضروات المجمدة والسلع الغذائية الممتازة. نحن نقدم الجودة والنضارة من مرافق الإنتاج لدينا في المنطقة الصناعية العاشرة من رمضان.">Mamma’s Food is a leading Egyptian company in the manufacturing, international trade, export, import and distribution of premium frozen fruit, vegetables and food commodities. We deliver quality and freshness from our production facilities in the 10th of Ramadan industrial area.</p>
+    <p data-en="Headquartered in New Cairo, with sales offices in Sweden, the United States, Kuwait, Jordan and Italy, we are a reliable partner to food manufacturers and companies across the global frozen food industry." data-ar="يقع مقرنا الرئيسي في القاهرة الجديدة، ولدينا مكاتب مبيعات في السويد، الولايات المتحدة، الكويت، الأردن، وإيطاليا. نحن شريك موثوق لمصنعي الأغذية والشركات في صناعة الأغذية المجمدة العالمية.">Headquartered in New Cairo, with sales offices in Sweden, the United States, Kuwait, Jordan and Italy, we are a reliable partner to food manufacturers and companies across the global frozen food industry.</p>
+  </div>
+  <div>
+    <h3 data-en="Our vision" data-ar="رؤيتنا">Our vision</h3>
+    <p data-en="To preserve our heritage and become a leading Egyptian manufacturer of high-quality goods in the food and beverage industry, and the supplier of choice for our type of products." data-ar="الحفاظ على تراثنا وأن نصبح مصنعاً مصرياً رائداً للسلع عالية الجودة في صناعة الأغذية والمشروبات، والمورد المفضل لمنتجاتنا.">To preserve our heritage and become a leading Egyptian manufacturer of high-quality goods in the food and beverage industry, and the supplier of choice for our type of products.</p>
+    <h3 data-en="Our mission" data-ar="مهمتنا">Our mission</h3>
+    <p data-en="To produce and develop high-quality products at a reasonable cost, and to give our customers the highest level of integrity and satisfaction." data-ar="إنتاج وتطوير منتجات عالية الجودة بتكلفة معقولة، ومنح عملائنا أعلى مستويات النزاهة والرضا.">To produce and develop high-quality products at a reasonable cost, and to give our customers the highest level of integrity and satisfaction.</p>
+  </div>
+</div></section>
+
+<!-- FROZEN VEGETABLES & FRUITS -->
 <section id="frozen"><div class="wrap">
   <h2 data-en="Frozen Vegetables & Fruits" data-ar="خضروات وفواكه مجمدة">Frozen Vegetables & Fruits</h2>
   <p class="lead" data-en="Grade A, picked at the peak of freshness, free from chemical preservatives and packed in Egypt." data-ar="درجة أولى، مقطوفة في ذروة نضارتها، خالية من المواد الحافظة الكيميائية ومعبأة في مصر.">Grade A, picked at the peak of freshness, free from chemical preservatives and packed in Egypt.</p>
@@ -130,70 +170,63 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     <div class="product-card">
       <img src="images/frozen-okra.jpg" alt="Frozen Okra Zero" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Okra Zero</h3>
-        <div class="ar-title">بامية صغيرة</div>
-        <p>Packed with nutrients that improve digestion, control cholesterol, and boost immunity.</p>
-        <button class="btn-details" onclick="openModal('modal-okra')">View Details</button>
+        <h3 data-en="Okra Zero" data-ar="بامية صغيرة">Okra Zero</h3>
+        <p data-en="Packed with nutrients that improve digestion, control cholesterol, and boost immunity." data-ar="غنية بالعناصر الغذائية التي تحسن الهضم، وتتحكم في الكوليسترول، وتعزز المناعة.">Packed with nutrients that improve digestion, control cholesterol, and boost immunity.</p>
+        <button class="btn-details" onclick="openModal('modal-okra')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Molokhia -->
     <div class="product-card">
       <img src="images/frozen-molokhia.jpg" alt="Frozen Minced Molokhia" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Minced Molokhia</h3>
-        <div class="ar-title">ملوخية مفرومة</div>
-        <p>Full of fibres that improve digestion, regulate blood pressure, and help with heart health.</p>
-        <button class="btn-details" onclick="openModal('modal-molokhia')">View Details</button>
+        <h3 data-en="Minced Molokhia" data-ar="ملوخية مفرومة">Minced Molokhia</h3>
+        <p data-en="Full of fibres that improve digestion, regulate blood pressure, and help with heart health." data-ar="غنية بالألياف التي تحسن الهضم، وتنظم ضغط الدم، وتساعد في صحة القلب.">Full of fibres that improve digestion, regulate blood pressure, and help with heart health.</p>
+        <button class="btn-details" onclick="openModal('modal-molokhia')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Green Peas -->
     <div class="product-card">
       <img src="images/frozen-peas.jpg" alt="Frozen Green Peas" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Green Peas</h3>
-        <div class="ar-title">بسلة خضراء</div>
-        <p>Packed with nutrients that boost immunity, good for eye health, and a good source of iron.</p>
-        <button class="btn-details" onclick="openModal('modal-peas')">View Details</button>
+        <h3 data-en="Green Peas" data-ar="بسلة خضراء">Green Peas</h3>
+        <p data-en="Packed with nutrients that boost immunity, good for eye health, and a good source of iron." data-ar="غنية بالعناصر الغذائية التي تعزز المناعة، جيدة لصحة العين، ومصدر جيد للحديد.">Packed with nutrients that boost immunity, good for eye health, and a good source of iron.</p>
+        <button class="btn-details" onclick="openModal('modal-peas')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Green Beans -->
     <div class="product-card">
       <img src="images/frozen-beans.jpg" alt="Frozen Green Beans" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Green Beans</h3>
-        <div class="ar-title">فاصوليا خضراء</div>
-        <p>Help with good eye and heart health. Improve digestion and promote weight loss.</p>
-        <button class="btn-details" onclick="openModal('modal-beans')">View Details</button>
+        <h3 data-en="Green Beans" data-ar="فاصوليا خضراء">Green Beans</h3>
+        <p data-en="Help with good eye and heart health. Improve digestion and promote weight loss." data-ar="تساعد في صحة العين والقلب. تحسن الهضم وتعزز فقدان الوزن.">Help with good eye and heart health. Improve digestion and promote weight loss.</p>
+        <button class="btn-details" onclick="openModal('modal-beans')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Mixed Veg -->
     <div class="product-card">
       <img src="images/frozen-mixed-veg.jpg" alt="Frozen Mixed Vegetables" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Mixed Vegetables</h3>
-        <div class="ar-title">خضار مشكل</div>
-        <p>A colorful mix of peas, carrots, and cut green beans. Tasty, healthy, and great value.</p>
-        <button class="btn-details" onclick="openModal('modal-mixedveg')">View Details</button>
+        <h3 data-en="Mixed Vegetables" data-ar="خضار مشكل">Mixed Vegetables</h3>
+        <p data-en="A colorful mix of peas, carrots, and cut green beans. Tasty, healthy, and great value." data-ar="مزيج ملون من البازلاء والجزر والفاصوليا الخضراء المقطعة. لذيذ وصحي وقيمة رائعة.">A colorful mix of peas, carrots, and cut green beans. Tasty, healthy, and great value.</p>
+        <button class="btn-details" onclick="openModal('modal-mixedveg')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- French Fries -->
     <div class="product-card">
       <img src="images/frozen-fries.jpg" alt="Frozen Pre-Fried French Fries" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Pre-Fried French Fries</h3>
-        <div class="ar-title">بطاطس نصف مقلية</div>
-        <p>Grade A, rich in Vitamin A, natural fiber source. 2.5 KG pack.</p>
-        <button class="btn-details" onclick="openModal('modal-fries')">View Details</button>
+        <h3 data-en="Pre-Fried French Fries" data-ar="بطاطس نصف مقلية">Pre-Fried French Fries</h3>
+        <p data-en="Grade A, rich in Vitamin A, natural fiber source. 2.5 KG pack." data-ar="درجة أولى، غنية بفيتامين أ، مصدر ألياف طبيعية. عبوة 2.5 كجم.">Grade A, rich in Vitamin A, natural fiber source. 2.5 KG pack.</p>
+        <button class="btn-details" onclick="openModal('modal-fries')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Strawberries -->
     <div class="product-card">
       <img src="images/frozen-strawberries.jpg" alt="Frozen Strawberries" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Frozen Strawberries</h3>
-        <div class="ar-title">فراولة مجمدة</div>
-        <p>Rich in Vitamin C and Antioxidants. GMO Free, No preservatives. 800g pack.</p>
-        <button class="btn-details" onclick="openModal('modal-strawberries')">View Details</button>
+        <h3 data-en="Frozen Strawberries" data-ar="فراولة مجمدة">Frozen Strawberries</h3>
+        <p data-en="Rich in Vitamin C and Antioxidants. GMO Free, No preservatives. 800g pack." data-ar="غنية بفيتامين C ومضادات الأكسدة. خالية من الكائنات المعدلة وراثيا، بدون مواد حافظة. عبوة 800 جرام.">Rich in Vitamin C and Antioxidants. GMO Free, No preservatives. 800g pack.</p>
+        <button class="btn-details" onclick="openModal('modal-strawberries')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
   </div>
@@ -209,60 +242,54 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     <div class="product-card">
       <img src="images/can-fava.jpg" alt="Split Fava Beans" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Split Fava Beans</h3>
-        <div class="ar-title">فول مقشور</div>
-        <p>100% Natural, Rich in Fiber & Vitamins. Ready to Eat.</p>
-        <button class="btn-details" onclick="openModal('modal-fava')">View Details</button>
+        <h3 data-en="Split Fava Beans" data-ar="فول مقشور">Split Fava Beans</h3>
+        <p data-en="100% Natural, Rich in Fiber & Vitamins. Ready to Eat." data-ar="طبيعي 100%، غني بالألياف والفيتامينات. جاهز للأكل.">100% Natural, Rich in Fiber & Vitamins. Ready to Eat.</p>
+        <button class="btn-details" onclick="openModal('modal-fava')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Sweet Corn -->
     <div class="product-card">
       <img src="images/can-corn.jpg" alt="Sweet Corn" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Sweet Corn</h3>
-        <div class="ar-title">ذرة سكرية</div>
-        <p>100% Natural, Rich in Fiber & Vitamins. Healthy & Delicious.</p>
-        <button class="btn-details" onclick="openModal('modal-corn')">View Details</button>
+        <h3 data-en="Sweet Corn" data-ar="ذرة سكرية">Sweet Corn</h3>
+        <p data-en="100% Natural, Rich in Fiber & Vitamins. Healthy & Delicious." data-ar="طبيعي 100%، غني بالألياف والفيتامينات. صحي ولذيذ.">100% Natural, Rich in Fiber & Vitamins. Healthy & Delicious.</p>
+        <button class="btn-details" onclick="openModal('modal-corn')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Sweet Peas -->
     <div class="product-card">
       <img src="images/can-peas.jpg" alt="Sweet Peas Plain" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Sweet Peas Plain</h3>
-        <div class="ar-title">بسلة سكرية سادة</div>
-        <p>100% Natural, Rich in Fiber & Vitamins. Ready to Eat.</p>
-        <button class="btn-details" onclick="openModal('modal-canpeas')">View Details</button>
+        <h3 data-en="Sweet Peas Plain" data-ar="بسلة سكرية سادة">Sweet Peas Plain</h3>
+        <p data-en="100% Natural, Rich in Fiber & Vitamins. Ready to Eat." data-ar="طبيعي 100%، غني بالألياف والفيتامينات. جاهز للأكل.">100% Natural, Rich in Fiber & Vitamins. Ready to Eat.</p>
+        <button class="btn-details" onclick="openModal('modal-canpeas')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Mixed Veg -->
     <div class="product-card">
       <img src="images/can-mixedveg.jpg" alt="Mixed Vegetables" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Mixed Vegetables</h3>
-        <div class="ar-title">خضار مشكل</div>
-        <p>Peas, Green Beans, Carrots. 100% Natural, Ready to Eat.</p>
-        <button class="btn-details" onclick="openModal('modal-canmixed')">View Details</button>
+        <h3 data-en="Mixed Vegetables" data-ar="خضار مشكل">Mixed Vegetables</h3>
+        <p data-en="Peas, Green Beans, Carrots. 100% Natural, Ready to Eat." data-ar="بازلاء، فاصوليا خضراء، جزر. طبيعي 100%، جاهز للأكل.">Peas, Green Beans, Carrots. 100% Natural, Ready to Eat.</p>
+        <button class="btn-details" onclick="openModal('modal-canmixed')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Foul Medammas -->
     <div class="product-card">
       <img src="images/can-foul.jpg" alt="Plain Foul Medammas" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Plain Foul Medammas</h3>
-        <div class="ar-title">فول مدمس سادة</div>
-        <p>100% Natural, Rich in Protein & Fiber. Healthy & Delicious.</p>
-        <button class="btn-details" onclick="openModal('modal-foul')">View Details</button>
+        <h3 data-en="Plain Foul Medammas" data-ar="فول مدمس سادة">Plain Foul Medammas</h3>
+        <p data-en="100% Natural, Rich in Protein & Fiber. Healthy & Delicious." data-ar="طبيعي 100%، غني بالبروتين والألياف. صحي ولذيذ.">100% Natural, Rich in Protein & Fiber. Healthy & Delicious.</p>
+        <button class="btn-details" onclick="openModal('modal-foul')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- White Beans -->
     <div class="product-card">
       <img src="images/can-whitebeans.jpg" alt="White Beans" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>White Beans</h3>
-        <div class="ar-title">فاصوليا بيضاء</div>
-        <p>Harvest Pearl. 100% Natural, Rich in Protein & Fiber.</p>
-        <button class="btn-details" onclick="openModal('modal-whitebeans')">View Details</button>
+        <h3 data-en="White Beans" data-ar="فاصوليا بيضاء">White Beans</h3>
+        <p data-en="Harvest Pearl. 100% Natural, Rich in Protein & Fiber." data-ar="لؤلؤة الحصاد. طبيعي 100%، غني بالبروتين والألياف.">Harvest Pearl. 100% Natural, Rich in Protein & Fiber.</p>
+        <button class="btn-details" onclick="openModal('modal-whitebeans')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
   </div>
@@ -278,146 +305,12 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     <div class="product-card">
       <img src="images/olive-green.jpg" alt="Green Olives" class="product-img" loading="lazy">
       <div class="product-info">
-        <h3>Green Olives</h3>
-        <div class="ar-title">زيتون أخضر</div>
-        <p>Whole, Pitted, Stuffed, Sliced, Paste. Ingredients: Green olives, water, salt, lactic acid.</p>
-        <button class="btn-details" onclick="openModal('modal-golive')">View Details</button>
+        <h3 data-en="Green Olives" data-ar="زيتون أخضر">Green Olives</h3>
+        <p data-en="Whole, Pitted, Stuffed, Sliced, Paste. Ingredients: Green olives, water, salt, lactic acid." data-ar="كاملة، منزوعة النوى، محشوة، مقطعة، معجون. المكونات: زيتون أخضر، ماء، ملح، حمض اللاكتيك.">Whole, Pitted, Stuffed, Sliced, Paste. Ingredients: Green olives, water, salt, lactic acid.</p>
+        <button class="btn-details" onclick="openModal('modal-golive')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
       </div>
     </div>
     <!-- Black Olives -->
     <div class="product-card">
       <img src="images/olive-black.jpg" alt="Black Olives" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3>Black Olives</h3>
-        <div class="ar-title">زيتون أسود</div>
-        <p>Natural & Oxidized. Whole, Pitted, Sliced. Ingredients: Black olives, water, salt, lactic acid.</p>
-        <button class="btn-details" onclick="openModal('modal-bolive')">View Details</button>
-      </div>
-    </div>
-    <!-- Pickles -->
-    <div class="product-card">
-      <img src="images/pickles.jpg" alt="Pickles" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3>Pickles</h3>
-        <div class="ar-title">مخللات</div>
-        <p>Mixed vegetable pickles in glass jars. Ingredients: Vegetables, water, salt, lactic acid.</p>
-        <button class="btn-details" onclick="openModal('modal-pickles')">View Details</button>
-      </div>
-    </div>
-    <!-- Mozzarella -->
-    <div class="product-card">
-      <img src="images/cheese-mozzarella.jpg" alt="Premium Mozzarella Cheese" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3>Premium Mozzarella</h3>
-        <div class="ar-title">جبنة موزاريلا</div>
-        <p>Cow milk, Starter Culture, Microbial Rennet, Salt. Perfect for pizza.</p>
-        <button class="btn-details" onclick="openModal('modal-mozzarella')">View Details</button>
-      </div>
-    </div>
-    <!-- Kashkaval -->
-    <div class="product-card">
-      <img src="images/cheese-kashkaval.jpg" alt="Kashkaval Cheese" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3>Kashkaval Cheese</h3>
-        <div class="ar-title">جبنة كشكفال</div>
-        <p>Natural Fresh Cow Milk, Culture, Salt, Rennet.</p>
-        <button class="btn-details" onclick="openModal('modal-kashkaval')">View Details</button>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<!-- FMCG BRANDS -->
-<section id="fmcg" class="tint"><div class="wrap">
-  <h2 data-en="FMCG Export Brands" data-ar="علامات تجارية للتصدير">FMCG Export Brands</h2>
-  <p class="lead" data-en="We source and export high-demand FMCG products from trusted global brands to Europe, the UAE, and GCC countries." data-ar="نحن نقوم بتوريد وتصدير منتجات السلع الاستهلاكية سريعة الدوران عالية الطلب من علامات تجارية عالمية موثوقة إلى أوروبا والإمارات ودول الخليج.">We source and export high-demand FMCG products from trusted global brands to Europe, the UAE, and GCC countries.</p>
-  
-  <div class="fmcg-category">
-    <h3>Chips & Snacks</h3>
-    <div class="brand-grid">
-      <div class="brand-item"><img src="images/brand-lays.png" alt="Lays" loading="lazy"><span>Lays</span></div>
-      <div class="brand-item"><img src="images/brand-doritos.png" alt="Doritos" loading="lazy"><span>Doritos</span></div>
-      <div class="brand-item"><img src="images/brand-cheetos.png" alt="Cheetos" loading="lazy"><span>Cheetos</span></div>
-      <div class="brand-item"><img src="images/brand-pringles.png" alt="Pringles" loading="lazy"><span>Pringles</span></div>
-      <div class="brand-item"><img src="images/brand-tiger.png" alt="Tiger" loading="lazy"><span>Tiger</span></div>
-      <div class="brand-item"><img src="images/brand-raw.png" alt="Raw" loading="lazy"><span>Raw</span></div>
-    </div>
-  </div>
-
-  <div class="fmcg-category">
-    <h3>Chocolate & Confectionery</h3>
-    <div class="brand-grid">
-      <div class="brand-item"><img src="images/brand-kitkat.png" alt="KitKat" loading="lazy"><span>KitKat</span></div>
-      <div class="brand-item"><img src="images/brand-cadbury.png" alt="Cadbury" loading="lazy"><span>Cadbury</span></div>
-      <div class="brand-item"><img src="images/brand-snickers.png" alt="Snickers" loading="lazy"><span>Snickers</span></div>
-      <div class="brand-item"><img src="images/brand-twix.png" alt="Twix" loading="lazy"><span>Twix</span></div>
-      <div class="brand-item"><img src="images/brand-mms.png" alt="M&M's" loading="lazy"><span>M&M's</span></div>
-      <div class="brand-item"><img src="images/brand-maltesers.png" alt="Maltesers" loading="lazy"><span>Maltesers</span></div>
-      <div class="brand-item"><img src="images/brand-nutella.png" alt="Nutella" loading="lazy"><span>Nutella</span></div>
-    </div>
-  </div>
-
-  <div class="fmcg-category">
-    <h3>Soft Drinks & Energy</h3>
-    <div class="brand-grid">
-      <div class="brand-item"><img src="images/brand-pepsi.png" alt="Pepsi" loading="lazy"><span>Pepsi</span></div>
-      <div class="brand-item"><img src="images/brand-cocacola.png" alt="Coca-Cola" loading="lazy"><span>Coca-Cola</span></div>
-      <div class="brand-item"><img src="images/brand-sprite.png" alt="Sprite" loading="lazy"><span>Sprite</span></div>
-      <div class="brand-item"><img src="images/brand-redbull.png" alt="Red Bull" loading="lazy"><span>Red Bull</span></div>
-      <div class="brand-item"><img src="images/brand-monster.png" alt="Monster" loading="lazy"><span>Monster</span></div>
-    </div>
-  </div>
-</div></section>
-
-<!-- CONTACT -->
-<section id="contact"><div class="wrap" style="text-align:center;">
-  <h2 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
-  <p class="lead" style="margin: 0 auto 2rem;" data-en="Tell us what you need and we will reply with specifications, packing and pricing." data-ar="أخبرنا بما تحتاجه وسنرد عليك بالمواصفات والتعبئة والأسعار.">Tell us what you need and we will reply with specifications, packing and pricing.</p>
-  <p><a href="mailto:info@mammas-food.com" style="font-size: 1.2rem; font-weight: 600; color: var(--green);">info@mammas-food.com</a></p>
-  <p style="margin-top: 0.5rem; color: var(--muted);">
-    <a href="tel:+2010005999699">+20 100 059 9699</a> &nbsp;|&nbsp; <a href="tel:+201008868886">+20 100 886 8886</a>
-  </p>
-  <p style="margin-top: 0.5rem; color: var(--muted);" data-en="Food Industrial Area, New Cairo, Egypt" data-ar="المنطقة الصناعية للاغذية، القاهرة الجديدة، مصر">Food Industrial Area, New Cairo, Egypt</p>
-</div></section>
-</main>
-
-<footer><div class="wrap">© 2026 Mamma’s Food. All rights reserved.</div></footer>
-
-<!-- ================= MODALS ================= -->
-
-<!-- Frozen Okra Modal -->
-<div class="modal-overlay" id="modal-okra">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-okra')">×</button>
-    <div class="modal-header">
-      <img src="images/frozen-okra.jpg" alt="Okra">
-      <div class="modal-header-text">
-        <h3>Frozen Okra Zero</h3>
-        <div class="ar-title">بامية صغيرة</div>
-      </div>
-    </div>
-    <div class="modal-body">
-      <p><strong>Description:</strong> Okra is packed with nutrients that improve digestion, control cholesterol levels, and boost the immunity system.</p>
-      <h4>Quality Standards</h4>
-      <ul>
-        <li>HACCP, GMP, SPC & QA systems applied.</li>
-        <li>Product is approved for HALAL.</li>
-        <li>System is certified for BRC.</li>
-        <li>Free from chemical preservatives.</li>
-        <li>Pesticide residues in conformance with WHO recommendations & EC directives.</li>
-      </ul>
-      <h4>Nutrition Facts (per 100g)</h4>
-      <table class="nutrition-table">
-        <tr><th>Protein</th><td>2.31 g</td></tr>
-        <tr><th>Carbohydrate</th><td>8.57 g</td></tr>
-        <tr><th>Fat</th><td>0.05 g</td></tr>
-        <tr><th>Crude Fiber</th><td>1.34 g</td></tr>
-        <tr><th>Sodium</th><td>17.86 mg</td></tr>
-        <tr><th>Calories</th><td>44</td></tr>
-      </table>
-      <h4>Packaging & Storage</h4>
-      <ul>
-        <li>Bag: Net weight 400 gm.</li>
-        <li>Carton: 20 Bags = 8kg.</li>
-        <li>Container: 40 Feet (about 2600/3000 cartons).</li>
-        <li>Storage: Deep Freeze
+     
