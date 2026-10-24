@@ -51,7 +51,6 @@ h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;letter-spacing:-.02em;ma
 h3{font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
 .lead{max-width:50rem;color:var(--muted);font-size:1.1rem;margin:0 0 2.5rem}
 .two{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
-.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
 .tint{background:var(--surface)}
 .lists{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin-top:1.5rem}
 ul.plain{list-style:none;margin:0;padding:0}
@@ -59,9 +58,6 @@ ul.plain li{padding:.45rem 0;border-bottom:1px solid var(--rule)}
 ul.plain li small{color:var(--muted)}
 .cats{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0 0;padding:0;list-style:none}
 .cats li{border:1.5px solid var(--green);color:var(--ink);padding:.3rem .85rem;border-radius:2rem;font-size:.97rem}
-dl.spec{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem}
-dl.spec dt{font-weight:600}
-dl.spec dd{margin:0;color:var(--muted)}
 
 /* === PRODUCT CATALOG GRIDS === */
 .product-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
@@ -71,7 +67,6 @@ dl.spec dd{margin:0;color:var(--muted)}
 .product-img { width: 100%; aspect-ratio: 4/5; object-fit: contain; background: #fff; padding: 1rem; border-bottom: 1px solid var(--rule); }
 .product-info { padding: 1.25rem; flex-grow: 1; display: flex; flex-direction: column; }
 .product-info h3 { font-size: 1.15rem; margin-bottom: 0.25rem; }
-.product-info .ar-title { font-size: 1rem; color: var(--green); font-weight: 600; margin-bottom: 0.5rem; }
 .product-info p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; flex-grow: 1; }
 .btn-details { background: var(--green); color: #fff; border: none; padding: 0.6rem; border-radius: 0.4rem; cursor: pointer; font-weight: 600; width: 100%; text-align: center; transition: background 0.2s;}
 .btn-details:hover { background: #155a42; }
@@ -94,7 +89,6 @@ dl.spec dd{margin:0;color:var(--muted)}
 .modal-header { display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 1.5rem; }
 .modal-header img { width: 120px; height: 150px; object-fit: contain; background: #fff; border-radius: 0.5rem; border: 1px solid var(--rule); padding: 0.5rem; }
 .modal-header-text h3 { font-size: 1.8rem; margin-bottom: 0.25rem; }
-.modal-header-text .ar-title { font-size: 1.3rem; color: var(--green); font-weight: 600; }
 .modal-body h4 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: var(--ink); border-bottom: 1px solid var(--rule); padding-bottom: 0.25rem; }
 .modal-body p, .modal-body ul { color: var(--muted); font-size: 0.95rem; margin: 0 0 1rem; }
 .modal-body ul { padding-left: 1.2rem; }
@@ -106,8 +100,6 @@ dl.spec dd{margin:0;color:var(--muted)}
 
 /* === FOOTER === */
 footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.95rem;border-top:1px solid var(--rule);text-align:center;}
-@media (max-width:42rem){.frozen{grid-template-columns:1fr}.hero{padding:3.5rem 0 3rem}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -168,7 +160,8 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
   <div class="product-grid">
     <!-- Okra -->
     <div class="product-card">
-      <img src="images/frozen-okra.jpg" alt="Frozen Okra Zero" class="product-img" loading="lazy">
+      <!-- PLACEHOLDER IMAGE - Replace src with your actual image file path -->
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Frozen+Okra" alt="Frozen Okra Zero" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Okra Zero" data-ar="بامية صغيرة">Okra Zero</h3>
         <p data-en="Packed with nutrients that improve digestion, control cholesterol, and boost immunity." data-ar="غنية بالعناصر الغذائية التي تحسن الهضم، وتتحكم في الكوليسترول، وتعزز المناعة.">Packed with nutrients that improve digestion, control cholesterol, and boost immunity.</p>
@@ -177,7 +170,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- Molokhia -->
     <div class="product-card">
-      <img src="images/frozen-molokhia.jpg" alt="Frozen Minced Molokhia" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Minced+Molokhia" alt="Frozen Minced Molokhia" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Minced Molokhia" data-ar="ملوخية مفرومة">Minced Molokhia</h3>
         <p data-en="Full of fibres that improve digestion, regulate blood pressure, and help with heart health." data-ar="غنية بالألياف التي تحسن الهضم، وتنظم ضغط الدم، وتساعد في صحة القلب.">Full of fibres that improve digestion, regulate blood pressure, and help with heart health.</p>
@@ -186,7 +179,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- Green Peas -->
     <div class="product-card">
-      <img src="images/frozen-peas.jpg" alt="Frozen Green Peas" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Green+Peas" alt="Frozen Green Peas" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Green Peas" data-ar="بسلة خضراء">Green Peas</h3>
         <p data-en="Packed with nutrients that boost immunity, good for eye health, and a good source of iron." data-ar="غنية بالعناصر الغذائية التي تعزز المناعة، جيدة لصحة العين، ومصدر جيد للحديد.">Packed with nutrients that boost immunity, good for eye health, and a good source of iron.</p>
@@ -195,7 +188,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- Green Beans -->
     <div class="product-card">
-      <img src="images/frozen-beans.jpg" alt="Frozen Green Beans" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Green+Beans" alt="Frozen Green Beans" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Green Beans" data-ar="فاصوليا خضراء">Green Beans</h3>
         <p data-en="Help with good eye and heart health. Improve digestion and promote weight loss." data-ar="تساعد في صحة العين والقلب. تحسن الهضم وتعزز فقدان الوزن.">Help with good eye and heart health. Improve digestion and promote weight loss.</p>
@@ -204,7 +197,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- Mixed Veg -->
     <div class="product-card">
-      <img src="images/frozen-mixed-veg.jpg" alt="Frozen Mixed Vegetables" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Mixed+Veg" alt="Frozen Mixed Vegetables" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Mixed Vegetables" data-ar="خضار مشكل">Mixed Vegetables</h3>
         <p data-en="A colorful mix of peas, carrots, and cut green beans. Tasty, healthy, and great value." data-ar="مزيج ملون من البازلاء والجزر والفاصوليا الخضراء المقطعة. لذيذ وصحي وقيمة رائعة.">A colorful mix of peas, carrots, and cut green beans. Tasty, healthy, and great value.</p>
@@ -213,7 +206,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- French Fries -->
     <div class="product-card">
-      <img src="images/frozen-fries.jpg" alt="Frozen Pre-Fried French Fries" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=French+Fries" alt="Frozen Pre-Fried French Fries" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Pre-Fried French Fries" data-ar="بطاطس نصف مقلية">Pre-Fried French Fries</h3>
         <p data-en="Grade A, rich in Vitamin A, natural fiber source. 2.5 KG pack." data-ar="درجة أولى، غنية بفيتامين أ، مصدر ألياف طبيعية. عبوة 2.5 كجم.">Grade A, rich in Vitamin A, natural fiber source. 2.5 KG pack.</p>
@@ -222,7 +215,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- Strawberries -->
     <div class="product-card">
-      <img src="images/frozen-strawberries.jpg" alt="Frozen Strawberries" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Strawberries" alt="Frozen Strawberries" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Frozen Strawberries" data-ar="فراولة مجمدة">Frozen Strawberries</h3>
         <p data-en="Rich in Vitamin C and Antioxidants. GMO Free, No preservatives. 800g pack." data-ar="غنية بفيتامين C ومضادات الأكسدة. خالية من الكائنات المعدلة وراثيا، بدون مواد حافظة. عبوة 800 جرام.">Rich in Vitamin C and Antioxidants. GMO Free, No preservatives. 800g pack.</p>
@@ -240,7 +233,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
   <div class="product-grid">
     <!-- Split Fava Beans -->
     <div class="product-card">
-      <img src="images/can-fava.jpg" alt="Split Fava Beans" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Split+Fava+Beans" alt="Split Fava Beans" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Split Fava Beans" data-ar="فول مقشور">Split Fava Beans</h3>
         <p data-en="100% Natural, Rich in Fiber & Vitamins. Ready to Eat." data-ar="طبيعي 100%، غني بالألياف والفيتامينات. جاهز للأكل.">100% Natural, Rich in Fiber & Vitamins. Ready to Eat.</p>
@@ -249,7 +242,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- Sweet Corn -->
     <div class="product-card">
-      <img src="images/can-corn.jpg" alt="Sweet Corn" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Sweet+Corn" alt="Sweet Corn" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Sweet Corn" data-ar="ذرة سكرية">Sweet Corn</h3>
         <p data-en="100% Natural, Rich in Fiber & Vitamins. Healthy & Delicious." data-ar="طبيعي 100%، غني بالألياف والفيتامينات. صحي ولذيذ.">100% Natural, Rich in Fiber & Vitamins. Healthy & Delicious.</p>
@@ -258,7 +251,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- Sweet Peas -->
     <div class="product-card">
-      <img src="images/can-peas.jpg" alt="Sweet Peas Plain" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Sweet+Peas" alt="Sweet Peas Plain" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Sweet Peas Plain" data-ar="بسلة سكرية سادة">Sweet Peas Plain</h3>
         <p data-en="100% Natural, Rich in Fiber & Vitamins. Ready to Eat." data-ar="طبيعي 100%، غني بالألياف والفيتامينات. جاهز للأكل.">100% Natural, Rich in Fiber & Vitamins. Ready to Eat.</p>
@@ -267,7 +260,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- Mixed Veg -->
     <div class="product-card">
-      <img src="images/can-mixedveg.jpg" alt="Mixed Vegetables" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Canned+Mixed+Veg" alt="Mixed Vegetables" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Mixed Vegetables" data-ar="خضار مشكل">Mixed Vegetables</h3>
         <p data-en="Peas, Green Beans, Carrots. 100% Natural, Ready to Eat." data-ar="بازلاء، فاصوليا خضراء، جزر. طبيعي 100%، جاهز للأكل.">Peas, Green Beans, Carrots. 100% Natural, Ready to Eat.</p>
@@ -276,7 +269,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- Foul Medammas -->
     <div class="product-card">
-      <img src="images/can-foul.jpg" alt="Plain Foul Medammas" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Foul+Medammas" alt="Plain Foul Medammas" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="Plain Foul Medammas" data-ar="فول مدمس سادة">Plain Foul Medammas</h3>
         <p data-en="100% Natural, Rich in Protein & Fiber. Healthy & Delicious." data-ar="طبيعي 100%، غني بالبروتين والألياف. صحي ولذيذ.">100% Natural, Rich in Protein & Fiber. Healthy & Delicious.</p>
@@ -285,7 +278,7 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
     </div>
     <!-- White Beans -->
     <div class="product-card">
-      <img src="images/can-whitebeans.jpg" alt="White Beans" class="product-img" loading="lazy">
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=White+Beans" alt="White Beans" class="product-img" loading="lazy">
       <div class="product-info">
         <h3 data-en="White Beans" data-ar="فاصوليا بيضاء">White Beans</h3>
         <p data-en="Harvest Pearl. 100% Natural, Rich in Protein & Fiber." data-ar="لؤلؤة الحصاد. طبيعي 100%، غني بالبروتين والألياف.">Harvest Pearl. 100% Natural, Rich in Protein & Fiber.</p>
@@ -303,14 +296,4 @@ footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--m
   <div class="product-grid">
     <!-- Green Olives -->
     <div class="product-card">
-      <img src="images/olive-green.jpg" alt="Green Olives" class="product-img" loading="lazy">
-      <div class="product-info">
-        <h3 data-en="Green Olives" data-ar="زيتون أخضر">Green Olives</h3>
-        <p data-en="Whole, Pitted, Stuffed, Sliced, Paste. Ingredients: Green olives, water, salt, lactic acid." data-ar="كاملة، منزوعة النوى، محشوة، مقطعة، معجون. المكونات: زيتون أخضر، ماء، ملح، حمض اللاكتيك.">Whole, Pitted, Stuffed, Sliced, Paste. Ingredients: Green olives, water, salt, lactic acid.</p>
-        <button class="btn-details" onclick="openModal('modal-golive')" data-en="View Details" data-ar="عرض التفاصيل">View Details</button>
-      </div>
-    </div>
-    <!-- Black Olives -->
-    <div class="product-card">
-      <img src="images/olive-black.jpg" alt="Black Olives" class="product-img" loading="lazy">
-     
+      <img src="https://placehold.co/400x500/e2ece3/4b6258?text=Green+Olives" alt="Green Olives" class="product
