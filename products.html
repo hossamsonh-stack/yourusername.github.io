@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>المنتجات | ماما فود</title><meta name="description" content="خضروات معلبة وفواكه وخضروات مجمدة وزيتون ومخللات وأجبان من مصر.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet"><style>
+:root{--bg:#F3F7F2;--surface:#E2ECE3;--ink:#0F2F26;--muted:#4B6258;--green:#1E7A5A;--lime:#B5D56A;--gold:#C99A2E;--rule:#BFD0C4;--hero:#0F2F26;--hero-ink:#F3F7F2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1D18;--surface:#142B24;--ink:#EAF2EC;--muted:#9FB8AB;--green:#4DB38A;--rule:#26443A;--hero:#07130F;color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Public Sans",system-ui,sans-serif;padding-top:env(safe-area-inset-top,0px)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--rule)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:.75rem 1.5rem;flex-wrap:wrap;padding-top:.9rem;padding-bottom:.9rem}
+.brand{font:800 1.4rem "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--green)}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500;color:var(--muted);font-size:.98rem}
+nav a:hover{color:var(--ink)}
+.hero{background:var(--hero);color:var(--hero-ink);padding:5rem 0 4rem}
+.hero h1{font-size:clamp(2.6rem,8vw,5.4rem);font-weight:800;letter-spacing:-.03em;max-width:15ch}
+.hero p{max-width:38rem;font-size:1.2rem;color:#C9DACF;margin:1.5rem 0 2rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--lime);color:#0F2F26;font-weight:600;padding:.85rem 1.5rem;border-radius:.4rem;text-decoration:none}
+.btn.alt{background:transparent;color:var(--hero-ink);border:1.5px solid #6F9A86}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1.5rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid #2B4D40}
+.facts b{display:block;font:700 1.15rem "Bricolage Grotesque",sans-serif;color:var(--lime)}
+.facts span{color:#C9DACF;font-size:.95rem}
+section{padding:4rem 0;border-top:1px solid var(--rule)}
+.hero+section{border-top:0}
+h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;letter-spacing:-.02em;margin-bottom:1.25rem}
+h3{font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
+.lead{max-width:44rem;color:var(--muted);font-size:1.1rem;margin:0 0 2rem}
+.two{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+figure{margin:0}
+figure img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:.5rem;background:var(--surface)}
+figcaption{padding:.5rem .1rem 0;font-weight:500}
+figcaption small{color:var(--muted);font-weight:400}
+.sub{margin-top:3rem}
+.lists{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin-top:1.5rem}
+ul.plain{list-style:none;margin:0;padding:0}
+ul.plain li{padding:.45rem 0;border-bottom:1px solid var(--rule)}
+ul.plain li small{color:var(--muted)}
+.frozen{display:grid;gap:2.5rem;grid-template-columns:minmax(0,1fr) minmax(0,16rem);align-items:start}
+.frozen img{width:100%;border-radius:.5rem;display:block}
+dl.spec{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem}
+dl.spec dt{font-weight:600}
+dl.spec dd{margin:0;color:var(--muted)}
+.tint{background:var(--surface)}
+.cats{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0 0;padding:0;list-style:none}
+.cats li{border:1.5px solid var(--green);color:var(--ink);padding:.3rem .85rem;border-radius:2rem;font-size:.97rem}
+.contact a{font-weight:600}
+.contact p{margin:.2rem 0}
+footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.95rem;border-top:1px solid var(--rule)}
+@media (max-width:42rem){.frozen{grid-template-columns:1fr}.hero{padding:3.5rem 0 3rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.cards{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{display:block;text-decoration:none;border:1px solid var(--rule);border-radius:.6rem;overflow:hidden;background:var(--bg)}
+.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.card div{padding:1rem 1.1rem 1.2rem}.card h3{margin-bottom:.35rem}.card p{margin:0;color:var(--muted);font-size:.97rem}
+.card:hover{border-color:var(--green)}
+img.contain{object-fit:contain;background:#fff}
+.tall img{aspect-ratio:3/4;object-fit:cover}
+nav a.on{color:var(--ink);border-bottom:2px solid var(--gold)}
+.nav-cta{background:var(--green);color:#fff!important;padding:.4rem .9rem;border-radius:.35rem}
+form{display:grid;gap:1rem;max-width:34rem}label{font-weight:600;display:grid;gap:.3rem}
+input,textarea{font:inherit;padding:.7rem;border:1px solid var(--rule);border-radius:.35rem;background:var(--bg);color:var(--ink)}
+button.btn{border:0;cursor:pointer;font:inherit;font-weight:600;justify-self:start}
+
+body,h1,h2,h3,.brand,.facts b,button,input,textarea{font-family:"Cairo","Public Sans",system-ui,sans-serif!important}
+h1,h2,h3{letter-spacing:0!important;line-height:1.3}
+body{line-height:1.8}
+.lang{border:1px solid var(--rule);padding:.3rem .7rem;border-radius:.35rem}
+[dir=ltr-i]{direction:ltr;unicode-bidi:isolate}
+</style></head><body>
+<header><div class="wrap"><a class="brand" href="index.html" dir="ltr">Mamma’s Food</a><nav aria-label="الرئيسية"><a href="index.html">الرئيسية</a><a href="products.html" class=on>المنتجات</a><a href="about.html">من نحن والجودة</a><a href="contact.html">اتصل بنا</a><a class="lang" href="../products.html" lang="en" dir="ltr">English</a><a class="nav-cta" href="contact.html#quote">اطلب عرض سعر</a></nav></div></header><main><div class="wrap" style="padding-top:3rem"><h1 style="font-size:clamp(2.2rem,6vw,3.6rem)">المنتجات</h1><p class="lead" style="margin-top:1rem">انتقل إلى: <a href="#canned">المعلبات</a> · <a href="#frozen">المجمدات</a> · <a href="#olives">الزيتون والمخللات</a> · <a href="#cheese">الأجبان</a></p></div>
+<section id="canned" class="tint"><div class="wrap"><h2>خضروات وبقوليات معلبة</h2><p class="lead">جميع العلب 400 جم. حلال، طبيعية 100%، جاهزة للأكل.</p><div class="grid">
+<figure class=""><img loading="lazy" src="../images/sweetpeas.jpg" alt="بسلة سكري سادة"><figcaption>بسلة سكري سادة</figcaption></figure><figure class=""><img loading="lazy" src="../images/peascarrots.jpg" alt="بسلة بالجزر"><figcaption>بسلة بالجزر</figcaption></figure><figure class=""><img loading="lazy" src="../images/mixed.jpg" alt="خضار مشكل بسلة، فاصوليا خضراء، جزر"><figcaption>خضار مشكل <small>بسلة، فاصوليا خضراء، جزر</small></figcaption></figure><figure class=""><img loading="lazy" src="../images/greenbeans.jpg" alt="فاصوليا خضراء قطع"><figcaption>فاصوليا خضراء قطع</figcaption></figure><figure class=""><img loading="lazy" src="../images/corn.jpg" alt="ذرة سكري"><figcaption>ذرة سكري</figcaption></figure><figure class=""><img loading="lazy" src="../images/okra.jpg" alt="بامية صغيرة"><figcaption>بامية صغيرة</figcaption></figure><figure class=""><img loading="lazy" src="../images/potato.jpg" alt="بطاطا حلوة"><figcaption>بطاطا حلوة</figcaption></figure><figure class=""><img loading="lazy" src="../images/foul.jpg" alt="فول مدمس سادة"><figcaption>فول مدمس سادة</figcaption></figure><figure class=""><img loading="lazy" src="../images/fava.jpg" alt="فول مقروش"><figcaption>فول مقروش</figcaption></figure><figure class=""><img loading="lazy" src="../images/white.jpg" alt="فاصوليا بيضاء"><figcaption>فاصوليا بيضاء</figcaption></figure></div></div></section>
+<section id="frozen"><div class="wrap"><h2>فواكه وخضروات مجمدة</h2><p class="lead">الدرجة الأولى، تُقطف في قمة النضارة وخالية من المواد الحافظة الكيميائية. بلد المنشأ: مصر.</p>
+<h3 style="margin:2rem 0 1rem">الخضروات <small style="font-weight:400;color:var(--muted)">أكياس 400 جم</small></h3><div class="grid tall" style="grid-template-columns:repeat(auto-fill,minmax(10.5rem,1fr))"><figure class=""><img loading="lazy" src="../images/fokra.jpg" alt="بامية زيرو"><figcaption>بامية زيرو</figcaption></figure><figure class=""><img loading="lazy" src="../images/molokhia.jpg" alt="ملوخية مفرومة"><figcaption>ملوخية مفرومة</figcaption></figure><figure class=""><img loading="lazy" src="../images/fpeas.jpg" alt="بسلة خضراء"><figcaption>بسلة خضراء</figcaption></figure><figure class=""><img loading="lazy" src="../images/fgreenbeans.jpg" alt="فاصوليا خضراء"><figcaption>فاصوليا خضراء</figcaption></figure><figure class=""><img loading="lazy" src="../images/fpeascarrots.jpg" alt="بسلة وجزر"><figcaption>بسلة وجزر</figcaption></figure><figure class=""><img loading="lazy" src="../images/fmixed.jpg" alt="خضار مشكل"><figcaption>خضار مشكل</figcaption></figure><figure class=""><img loading="lazy" src="../images/broccoli.jpg" alt="بروكلي"><figcaption>بروكلي</figcaption></figure><figure class=""><img loading="lazy" src="../images/cauliflower.jpg" alt="قرنبيط"><figcaption>قرنبيط</figcaption></figure><figure class=""><img loading="lazy" src="../images/chopped.jpg" alt="سبانخ مفرومة"><figcaption>سبانخ مفرومة</figcaption></figure><figure class=""><img loading="lazy" src="../images/spinach.jpg" alt="سبانخ ورق كامل"><figcaption>سبانخ ورق كامل</figcaption></figure><figure class=""><img loading="lazy" src="../images/artichoke.jpg" alt="قلوب الخرشوف"><figcaption>قلوب الخرشوف</figcaption></figure><figure class=""><img loading="lazy" src="../images/broadbeans.jpg" alt="فول أخضر"><figcaption>فول أخضر</figcaption></figure></div>
+<h3 style="margin:2.5rem 0 1rem">الفواكه <small style="font-weight:400;color:var(--muted)">أكياس 800 جم</small></h3><div class="grid tall" style="grid-template-columns:repeat(auto-fill,minmax(10.5rem,1fr))"><figure class=""><img loading="lazy" src="../images/strawberries.jpg" alt="فراولة"><figcaption>فراولة</figcaption></figure><figure class=""><img loading="lazy" src="../images/peaches.jpg" alt="خوخ كامل"><figcaption>خوخ كامل</figcaption></figure><figure class=""><img loading="lazy" src="../images/apricots.jpg" alt="مشمش كامل"><figcaption>مشمش كامل</figcaption></figure><figure class=""><img loading="lazy" src="../images/guavas.jpg" alt="جوافة كاملة"><figcaption>جوافة كاملة</figcaption></figure><figure class=""><img loading="lazy" src="../images/mango.jpg" alt="شرائح مانجو"><figcaption>شرائح مانجو</figcaption></figure><figure class=""><img loading="lazy" src="../images/pomegranate.jpg" alt="حبوب رمان"><figcaption>حبوب رمان</figcaption></figure></div>
+<h3 style="margin:2.5rem 0 1rem">البطاطس <small style="font-weight:400;color:var(--muted)">كيس 2.5 كجم</small></h3><div class="grid tall" style="grid-template-columns:repeat(auto-fill,minmax(10.5rem,1fr))"><figure class=""><img loading="lazy" src="../images/fries.jpg" alt="بطاطس نصف مقلية"><figcaption>بطاطس نصف مقلية</figcaption></figure></div>
+<h3 class="sub">التعبئة والتخزين <small style="font-weight:400;color:var(--muted)">خط الخضروات 400 جم</small></h3><dl class="spec"><dt>الكيس</dt><dd>صافي الوزن 400 جم</dd><dt>الكرتونة</dt><dd>20 كيسًا، 8 كجم</dd><dt>حاوية 40 قدمًا</dt><dd>حوالي 2,600 إلى 3,000 كرتونة</dd><dt>التخزين</dt><dd>تجميد عميق عند −18 °م لمدة تصل إلى 18 شهرًا. يُمنع إعادة التجميد.</dd><dt>بلد المنشأ</dt><dd>مصر</dd></dl></div></section>
+<section id="olives" class="tint"><div class="wrap"><h2>الزيتون والمخللات</h2><p class="lead">تُعبأ في برطمانات زجاجية (150 و210 و370 و720 مل)، وعلب معدنية (400 مل وA10 وA12)، وبراميل وعبوات PET.</p><div class="grid">
+<figure class="contain"><img loading="lazy" src="../images/greenolives.jpg" alt="زيتون أخضر كامل، منزوع النوى، محشي، شرائح، معجون"><figcaption>زيتون أخضر <small>كامل، منزوع النوى، محشي، شرائح، معجون</small></figcaption></figure><figure class="contain"><img loading="lazy" src="../images/naturalblack.jpg" alt="زيتون أسود طبيعي كامل، منزوع النوى، محشي"><figcaption>زيتون أسود طبيعي <small>كامل، منزوع النوى، محشي</small></figcaption></figure><figure class="contain"><img loading="lazy" src="../images/blackolives.jpg" alt="زيتون أسود مؤكسد كامل، منزوع النوى، شرائح"><figcaption>زيتون أسود مؤكسد <small>كامل، منزوع النوى، شرائح</small></figcaption></figure><figure class="contain"><img loading="lazy" src="../images/pickles.jpg" alt="مخللات خضروات مشكلة"><figcaption>مخللات <small>خضروات مشكلة</small></figcaption></figure></div></div></section>
+<section id="cheese"><div class="wrap"><h2>الأجبان والزبدة</h2><p class="lead">مصنوعة من حليب البقر الطبيعي الطازج. المكونات مدونة على كل عبوة.</p><div class="grid">
+<figure class="contain"><img loading="lazy" src="../images/pmozz.jpg" alt="موزاريلا بريميوم"><figcaption>موزاريلا بريميوم</figcaption></figure><figure class="contain"><img loading="lazy" src="../images/mozz.jpg" alt="موزاريلا"><figcaption>موزاريلا</figcaption></figure><figure class="contain"><img loading="lazy" src="../images/baramely.jpg" alt="جبنة بارميلي"><figcaption>جبنة بارميلي</figcaption></figure><figure class="contain"><img loading="lazy" src="../images/cheese.jpg" alt="عكاوي وشلل وجدايل"><figcaption>عكاوي وشلل وجدايل</figcaption></figure><figure class="contain"><img loading="lazy" src="../images/cheddar.jpg" alt="شيدر وحلومي وموزاريلا بلوك"><figcaption>شيدر وحلومي وموزاريلا بلوك</figcaption></figure><figure class="contain"><img loading="lazy" src="../images/kashbutter.jpg" alt="قشقوان وزبدة طبيعية"><figcaption>قشقوان وزبدة طبيعية</figcaption></figure></div></div></section></main>
+<footer><div class="wrap two"><div><b>ماما فود (Mamma’s Food)</b><br>المنطقة الصناعية للأغذية، القاهرة الجديدة، مصر<br><a href="mailto:info@mammas-food.com">info@mammas-food.com</a><br><a href="tel:+201000599699" dir="ltr">+20 100 059 9699</a> · <a href="tel:+201008868886" dir="ltr">+20 100 886 8886</a></div><div>© 2026 ماما فود. جميع الحقوق محفوظة.</div></div></footer></body></html>
